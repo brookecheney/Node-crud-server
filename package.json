@@ -1,0 +1,35 @@
+{
+  "name": "node-crud-server",
+  "version": "1.0.0",
+  "description": "Simple node server example",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node index.js",
+    "populate": "node seed/populate.js"
+  },
+  "engines": {
+    "node": "11.2.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.6"
+  },
+  "devDependencies": {
+    "node-fetch": "^2.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brookecheney/Node-crud-server"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Thor Anderson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brookecheney/Node-crud-server/issues"
+  },
+  "homepage": "https://github.com/brookecheney/Node-crud-server#readme"
+}
