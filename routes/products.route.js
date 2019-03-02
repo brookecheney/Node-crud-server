@@ -5,10 +5,11 @@ const router = express.Router();
 const product_controller = require('../controllers/products.controller');
 
 
+router.get('/all', product_controller.all)
 // a simple test url to check that all of our files are communicating correctly.
 router.get('/test', product_controller.test);
-module.exports = router;
 
+router.get('/:id', product_controller.product_details);
 
 // routes/products.route.js
 
@@ -25,3 +26,4 @@ router.put('/:id/update', product_controller.product_update);
 // routes/products.route.js
 
 router.delete('/:id/delete', product_controller.product_delete);
+module.exports = router;

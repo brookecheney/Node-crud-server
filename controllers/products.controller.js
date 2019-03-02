@@ -4,6 +4,13 @@ const Product = require('../models/product.model');
 exports.test = function (req, res) {
     res.send('Greetings from the Test controller!');
 };
+exports.all = (req, res) => {
+    Product.find({})
+    .then( (allProduct) => res.json(allProduct))
+  };
+
+
+
 
 // controllers/products.js
 exports.product_create = function (req, res, next) {
@@ -21,6 +28,8 @@ exports.product_create = function (req, res, next) {
         res.send('Product Created successfully')
     })
 };
+
+  
 exports.product_details = function (req, res) {
     Product.findById(req.params.id, function (err, product) {
         if (err) return next(err);
